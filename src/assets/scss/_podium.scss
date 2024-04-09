@@ -1,0 +1,137 @@
+@import "./variables.scss";
+@import "./responsive.scss";
+@import url("https://fonts.googleapis.cAom/css2?family=Josefin+Sans&display=swap");
+
+.leaderboard-wrapper {
+  flex: 1 1 auto;
+}
+
+.podium-wrapper {
+  flex: 0.3 0 auto;
+}
+
+.podium {
+  min-height: 475px;
+  width: 100%;
+  margin: 2rem 0;
+  margin-right: 40px;
+  @media #{$breakpoint-lg} {
+    margin: 0;
+    margin-right: 40px;
+    flex: 1 1 0%;
+    min-height: calc(100vh - 94px);
+  }
+  border-radius: 15px;
+  // background: $heading;
+  font-family: "Josefin Sans", Arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .person {
+    display: flex;
+    margin: 1rem 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .link {
+      margin: 0.2rem 0;
+      color: #fff;
+      margin-top: -0.3rem;
+      font-size: 14px;
+      text-align: center;
+      width: 150px;
+      max-width: 100px;
+      @media #{$breakpoint-lg} {
+        max-width: 100px;
+        font-size: 10px;
+      }
+    }
+
+    .points {
+      color: rgb(93, 101, 252);
+      font-size: 32px;
+      font-weight: 900;
+    }
+
+    .photo {
+      width: 100px;
+      background: #fff;
+      border-radius: 50%;
+      border: 5px solid rgb(93, 101, 252);
+      box-shadow: 0 0 20px rgb(93, 101, 252);
+      margin-bottom: 1rem;
+    }
+
+    .photo-footer {
+      width: 100px;
+      background: #fff;
+      border-radius: 50%;
+      border: 5px solid rgb(93, 101, 252);
+      box-shadow: 0 0 20px rgb(93, 101, 252);
+      margin-bottom: 1rem;
+    }
+    &:nth-child(1) {
+      .photo {
+        animation: movebounce 2s ease-in-out infinite;
+        animation-delay: 0.5s;
+      }
+    }
+    &:nth-child(2) {
+      .photo {
+        animation: movebounce 2s ease-in-out infinite;
+      }
+    }
+    &:nth-child(3) {
+      .photo {
+        animation: movebounce 2s ease-in-out infinite;
+        animation-delay: 1s;
+      }
+    }
+    .bi-award-fill {
+      color: gold;
+      filter: drop-shadow(0px 0px 5px gold);
+      font-size: 40px;
+    }
+  }
+  .first {
+    z-index: 10;
+    flex: 6 6 auto;
+    scale: 1.4;
+    @media #{$breakpoint-lg} {
+      scale: 1.7;
+    }
+  }
+  .second {
+    flex: 5 5 auto;
+    transform: scale(1.1) translateY(-20px);
+    @media #{$breakpoint-lg} {
+      scale: 1.3;
+    }
+  }
+
+  .third {
+    flex: 4 4 auto;
+    transform: translateY(-20px);
+  }
+  .bi-caret-up-fill {
+    color: rgb(93, 101, 252);
+    font-size: 20px;
+  }
+  .num {
+    font-size: 36px;
+  }
+}
+
+@keyframes movebounce {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}

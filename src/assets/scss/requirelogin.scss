@@ -1,0 +1,118 @@
+.login-modal {
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: black;
+    justify-content: center;
+    justify-items: center;
+
+    &.hide {
+        display: none;
+    }
+
+    &.appear {
+        display: flex;
+    }
+
+    &.ml-252 {
+        @media #{$breakpoint-lg} {
+            left: 252px;
+          }
+    }
+
+    .login-box {
+        align-self: center;
+        background: #1A1159;
+        color: white;
+        height: fit-content;
+        border-radius: 20px;
+        padding: 20px 48px;
+
+        &.ml-252 {
+          @media #{$breakpoint-lg} {
+            margin-left: 252px;
+          }
+        }
+
+        .game-slide {
+            display: flex;
+            flex-direction: column;
+            width: 40vw;
+            h1 {
+                font-size: 28px;
+            }
+            span {
+                color: #c2d4f8;
+                font-size: 20px;
+            }
+            p {
+                margin-bottom: 0;
+                font-size: 18px;
+            }
+            .login {
+                width: 50%;
+                align-self: center;
+                margin-top: 20px;
+            }
+            .prize-img {
+                width: 16vw;
+                align-self: center;
+                margin-top: 20px;
+            }
+            padding: 10px;
+        }
+    }
+}
+.replay-btn {
+    background: none;
+    border: none;
+    color: white;
+    margin-top: 4px;
+    align-self: start;
+    border-bottom: 1px solid white;
+}
+.replay-btn:hover {
+    opacity: 0.7;
+}
+@media screen and (max-width: 768px) {
+    .login-modal {
+        .login-box {
+            padding: 12px 20px;
+            .game-slide {
+                width: 60vw;
+                padding: 0;
+                h1 {
+                    font-size: 20px;
+                }
+                span {
+                    font-size: 16px;
+                }
+                p {
+                    font-size: 12px;
+                }
+                .prize-img {
+                    width: 50vw;
+                    margin-top: 12px;
+                }
+            }
+        }
+    }
+    .replay-btn {
+        font-size: 12px;
+    }
+  }
+.footer-login {
+    @media (min-width: 990px) {
+        margin-left: -126px;
+        margin-right: -126px;
+    }
+}
+
+.hide-on-mobile {
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+}

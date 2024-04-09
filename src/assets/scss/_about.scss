@@ -1,0 +1,109 @@
+.about-card {
+    text-align: center;
+
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4rem;
+        height: 4rem;
+        background-color: $heading;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        color: $white;
+        border-radius: .75rem;
+
+        i {
+            font-size: 2rem;
+        }
+
+        img {
+            max-width: 2.5rem;
+        }
+    }
+}
+
+.counter-wrap {
+    border-radius: .75rem;
+}
+.white-hover:hover {
+    color: white
+}
+.bid-tutorial-intro {
+    height: 20vh;
+    @media (min-width: 576px) {
+        height: 30vh;
+    }
+    @media (min-width: 768px) {
+        height: 75vh;
+    }
+}
+.bid-mb-24 {
+    margin-bottom: 24px;
+    @media (min-width: 768px) {
+        margin-bottom: 0;
+    }
+}
+.bid-row-col {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: normal;
+        justify-content: center;
+    }
+}
+.row-col {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+    .first-item {
+        margin-bottom: 20px;
+        @media (min-width: 768px) {
+            margin-right: 20px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.bid-container {
+    max-width: 320px;
+}
+
+@media (min-width:400px) {
+
+    .bid-container {
+        max-width: 360px;
+    }
+}
+
+@media (min-width:480px) {
+
+    .bid-container {
+        max-width: 420px;
+    }
+}
+
+@media (min-width:576px) {
+
+    .bid-container {
+        max-width: 550px;
+    }
+}
+
+@media (min-width:768px) {
+
+    .bid-container {
+        max-width: 100%;
+    }
+}
+.bid-mr-20 {
+    @media (min-width: 768px) {
+        margin-right: 20px;
+    }
+}

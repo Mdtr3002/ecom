@@ -1,0 +1,328 @@
+.intro-modal {
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: black;
+    justify-content: center;
+    justify-items: center;
+
+    &.hide {
+        display: none;
+    }
+
+    &.appear {
+        display: flex;
+    }
+
+    .intro-box {
+        align-self: center;
+        background: #1A1159;
+        color: white;
+        width: 40vw;
+        height: fit-content;
+        border-radius: 16px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        &.ml-252 {
+            @media #{$breakpoint-lg} {
+                margin-left: 252px;
+              }
+        }
+
+        .game-title {
+            padding: 10px 10px 0 10px;
+            margin-bottom: 0;
+            width: fit-content;
+            margin: auto;
+        }
+
+        .start-btn {
+            position: absolute;
+            bottom: 4px;
+            right: 0;
+            z-index: 1;
+        }
+
+        .game-slide {
+            display: flex;
+            flex-direction: column;
+            width: 40vw;
+            .quiz-img {
+                margin-top: 4px;
+                flex-wrap: wrap;
+                @media (min-width: 1700px) {
+                    flex-wrap: nowrap;
+                }
+                img {
+                    border-radius: 8px;
+                    width: 40vw;
+                    &.game-img2 {
+                        margin-bottom: 4px;
+                        @media (min-width: 768px) {
+                            margin-right: 4px;
+                            margin-bottom: 0;
+                        }
+                    }
+                    @media (min-width: 768px) {
+                        width: 16vw;
+                    }
+                }
+            }
+            span {
+                color: #c2d4f8;
+                font-size: 20px;
+                align-self: center;
+            }
+            p {
+                align-self: center;
+                margin-bottom: 0;
+                font-size: 18px;
+            }
+            .game-img {
+                width: 16vw;
+                align-self: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            padding: 10px;
+        }
+    }
+}
+.detail-btn {
+    background: black;
+    color: white;
+    margin-left: auto;
+    border: none;
+}
+.gcoin {
+    color: #FBCB43;
+    background-color: #1A1159;
+    padding: 10px 16px;
+    border-radius: 5px;
+    margin-left: 4px;
+}
+.level {
+    background-color: #1A1159;
+    padding: 10px 16px;
+    border-radius: 5px;
+}
+.react-horizontal-scrolling-menu--scroll-container {
+    overflow-x: hidden;
+}
+.next-btn {
+    position: absolute;
+    height: fit-content;
+    z-index: 1;
+    bottom: 0;
+    left:  0;
+    font-size: 18px;
+    width: fit-content;
+    background-color: #c2d4f8;
+    padding: 12px;
+    border-bottom-left-radius: 16px;
+    color: #1A1159;
+    border: none;
+    min-width: 55px;
+}
+.back-btn {
+    position: absolute;
+    height: fit-content;
+    z-index: 1;
+    bottom: 0;
+    font-size: 18px;
+    right: 0;
+    width: fit-content;
+    background-color: #c2d4f8;
+    padding: 12px;
+    border-bottom-right-radius: 16px;
+    color: #1A1159;
+    border: none;
+    min-width: 55px;
+}
+.quiz-btn {
+    font-size: 18px;
+    margin: auto;
+    width: fit-content;
+    background-color: #c2d4f8;
+    padding: 12px;
+    border-bottom-right-radius: 16px;
+    color: #1A1159;
+    border: none;
+    min-width: 55px;
+}
+@media screen and (max-width: 768px) {
+    .game-title {
+        font-size: 20px;
+    }
+    .intro-modal {
+        .intro-box {
+            width: 70vw;
+            .game-slide {
+                width: 70vw;
+                p {
+                    font-size: 15px;
+                }
+                .game-img {
+                    width: 50vw;
+                    margin-top: 12px;
+                }
+                padding: 4px;
+            }
+        }
+    }
+    .back-btn, .next-btn {
+        width: 12vw;
+        font-size: 15px;
+    }
+  }
+.checkpoint-bar {
+    display: flex;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    @media (min-width: 1000px) {
+        width: calc(100vw - 251px);
+    }
+    height: 60px;
+    background: #c2d4f8;
+    justify-content: center;
+    align-items: center;
+    .checkpoint-title {
+      font-size: 32px;
+    }
+    .checkpoint-line {
+        height: 8px;
+        width: 32px;
+        background: grey;
+        border-radius: 4px;
+        &.green-col {
+            background: #0F9D58;
+        }
+    }
+    .checkpoint-circle {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        border: 2px green;
+    }
+    .check-bg {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: grey;
+        &.green-col {
+            background: #0F9D58;
+        }
+    }
+}
+.activity-field {
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1A1159;
+    @media (max-width: 576px) {
+        padding: 12px;
+    }
+    padding: 20px;
+    border-radius: 8px;
+    &.border-top-0 {
+        border-radius: 0 0 8px 8px;
+    }
+    &.border-bottom-0 {
+        border-radius: 8px 8px 0 0;
+    }
+    .md-hide {
+        &.keymatch {
+            display: flex;
+        }
+        @media (min-width: 768px) {
+            display: none;
+            &.keymatch {
+                display: none;
+            }
+        }
+    }
+    .activity-img {
+        width: 160px;
+        height: 160px;
+        @media (min-width: 1200px) {
+            width: 180px;
+            height: 180px;
+        }
+        background: white;
+        border-radius: 8px;
+    }
+    .activity-text {
+        width: 80vw;
+        margin-top: 20px;
+    }
+    .md-show {
+        display: none;
+        @media (min-width: 768px) {
+            display: flex;
+            width: 60vw;
+            .activity-text {
+                width: 40vw;
+                margin-left: 12px;
+                margin-top: 0;
+            }
+            &.rev {
+                flex-direction: row-reverse;
+            }
+        }
+        @media (min-width: 1000px) {
+            .activity-text {
+                width: 50vw;
+            }
+        }
+        @media (min-width: 1400px) {
+            .activity-text {
+                font-size: 20px;
+            }
+        }
+    }
+    .prize-box {
+        @media (min-width: 768px) {
+            width: 60vw;
+        }
+        @media (min-width: 1400px) {
+            &.activity-text {
+                font-size: 20px;
+                .f-20 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+.cd-title {
+    @media (min-width: 1200px) {
+        font-size: 32px;
+    }
+}
+.cd-subtitle {
+    @media (min-width: 1200px) {
+        font-size: 24px;
+    }
+}
+.rules-circle {
+    width: 24px;
+    height: 24px;
+    @media (min-width: 1200px) {
+        width: 32px;
+        height: 32px;
+    }
+}
+.google-loading {
+    svg {
+        width: 120% !important;
+    }
+}

@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "gdsc-game-ec439",
+    "dev": "gdsc-game-dev"
+  },
+  "targets": {},
+  "etags": {}
+}

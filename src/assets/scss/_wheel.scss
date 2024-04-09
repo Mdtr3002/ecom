@@ -1,0 +1,129 @@
+.wheel-wrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  right: 0;
+  transition: all 500ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5000;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.wheel-wrapper-log-in {
+	height: 100vh;
+	transition: all 500ms;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 5000;
+	background-color: rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+
+	&.countdown {
+		position: absolute;
+    	bottom: 0;
+		top: 64px;
+		right: 0;
+    @media only screen and (min-width: 992px) {
+      left: 252px;
+	  top: 0;
+    }
+    left: 0;
+	}
+	&.box-mt {
+		@media only screen and (min-width: 1600px) {
+			margin-top: 0;
+		  }
+	}
+  }
+
+.game-box {
+	width: 500px;
+  z-index: 5001;
+}
+
+.reset-btn {
+	display: none;
+}
+
+.start-btn {
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	margin-top: 40px;
+	border-radius: 12px;
+	width: 180px;
+	height: 35px;
+	font-size: 25px;
+	font-weight: bold;
+	border: 3px solid white;
+}
+
+.start-btn:hover {
+	background: rgb(238, 81, 24);
+	color: white;
+}
+
+.reward {
+	position: absolute;
+  bottom: 50%;
+	width: 800px;
+	height: 500px;
+	// margin-top: -250px;
+	// margin-left: -400px;
+	z-index: 9999;
+	background: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
+}
+
+.reward p {
+	font-size: 25px;
+}
+
+.reward img {
+	width: 225px;
+}
+
+.btn-close {
+	margin-top: 50px;
+	font-family: inherit;
+	font-size: 20px;
+	padding: 10px 30px;
+	border: 1px solid black;
+	background: #fff;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: all 0.2s;
+	transition-timing-function: linear;
+}
+
+.btn-close:hover {
+	background: black;
+	color: white;
+}
+
+.mask {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  right: 0;
+  transition: all 500ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9998;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}

@@ -1,0 +1,96 @@
+.login-modal {
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: black;
+  justify-content: center;
+  justify-items: center;
+}
+.login-modal.hide {
+  display: none;
+}
+.login-modal.appear {
+  display: flex;
+}
+.login-modal .login-box {
+  align-self: center;
+  background: #1A1159;
+  color: white;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 20px;
+  padding: 20px 48px;
+}
+.login-modal .login-box.ml-252 {
+  margin-left: 252px;
+}
+.login-modal .login-box .game-slide {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  padding: 10px;
+}
+.login-modal .login-box .game-slide h1 {
+  font-size: 28px;
+}
+.login-modal .login-box .game-slide span {
+  color: #c2d4f8;
+  font-size: 20px;
+}
+.login-modal .login-box .game-slide p {
+  margin-bottom: 0;
+  font-size: 18px;
+}
+.login-modal .login-box .game-slide .login {
+  width: 50%;
+  align-self: center;
+  margin-top: 20px;
+}
+.login-modal .login-box .game-slide .prize-img {
+  width: 16vw;
+  align-self: center;
+  margin-top: 20px;
+}
+
+.replay-btn {
+  background: none;
+  border: none;
+  color: white;
+  margin-top: 4px;
+  align-self: start;
+  border-bottom: 1px solid white;
+}
+
+.replay-btn:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 768px) {
+  .login-modal .login-box {
+    padding: 12px 20px;
+  }
+  .login-modal .login-box .game-slide {
+    width: 60vw;
+    padding: 0;
+  }
+  .login-modal .login-box .game-slide h1 {
+    font-size: 20px;
+  }
+  .login-modal .login-box .game-slide span {
+    font-size: 16px;
+  }
+  .login-modal .login-box .game-slide p {
+    font-size: 12px;
+  }
+  .login-modal .login-box .game-slide .prize-img {
+    width: 50vw;
+    margin-top: 12px;
+  }
+  .replay-btn {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=requirelogin.css.map */

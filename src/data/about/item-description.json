@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Keychain",
+        "description": "A plastic Keychain with GDSC's logo"
+    },
+    {
+        "name": "Bracelet",
+        "description": "A silicone bracelet with GDSC's logo. Its color will be random from four options: blue, red, green, and yellow"
+    },
+    {
+        "name": "Tote Bag",
+        "description": "A tote bag with GDSC's logo"
+    },
+    {
+        "name": "Stickers",
+        "description": "Random sticker with logo of Google's Technology"
+    }
+]
