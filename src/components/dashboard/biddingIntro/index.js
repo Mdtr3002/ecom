@@ -142,14 +142,17 @@ const BiddingIntro = (props) => {
                   <OverlayTrigger
                     placement="top"
                     delay={{ show: 250, hide: 400 }}
-                    overlay={<Tooltip id={`liveAuctionNFT`}>{elem?.itemId?.name || elem?.name}</Tooltip>}
+                    overlay={
+                      <Tooltip id={`liveAuctionNFT`}>
+                        {elem?.itemId?.name || elem?.name}
+                      </Tooltip>
+                    }
                   >
                     <h5
                       className="name d-block hover-primary text-truncate"
                       style={{
                         marginBottom: 0,
                         cursor: "pointer",
-                        color: "white",
                       }}
                     >
                       {elem?.itemId?.name || elem?.name}
@@ -187,11 +190,11 @@ const BiddingIntro = (props) => {
               />
               <h4 className="mb-0">{title}</h4>
             </div>
-            <Link className="btn btn-primary btn-minimal" to={"/collection"}>
+            <Link className="btn btn-primary btn-minimal" to={btnPath}>
               View all
             </Link>
           </div>
-          <h6>Check out our reward collection</h6>
+          <h6>Exclusive bidding for unique fashion treasures</h6>
           <div className="trending-auction-slide">
             <TinySlider settings={liveBidsSetting}>
               {SpecialBidCards}

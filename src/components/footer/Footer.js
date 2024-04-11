@@ -25,7 +25,7 @@ export default function Footer() {
           <LeftWidget
             lightLogo="img/core-img/logo2.png"
             darkLogo="img/core-img/logo2.png"
-            subText="From our dedicated organizers, a community-based web which promote exciting discord activities, fun-to-play games and built-in prize exchange mechanism"
+            subText="Unlock the thrill of bidding and winning with our dynamic online auction platform, where treasures await at every click."
             contactInfo="Email: nocanwin@hcmut.edu.vn"
             socialVisibility="visible" // try 'visible' or 'hidden'
             socialTitle="Join the community"

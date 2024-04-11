@@ -47,7 +47,7 @@ export default function Login() {
 
       <LoginContent
         title="Welcome to NCWin!"
-        subTitle="From our dedicated organizers, a community-based web which promote exciting Discord activities, fun-to-play games and built-in prize exchange mechanism"
+        subTitle="Unlock the thrill of bidding and winning with our dynamic online auction platform, where treasures await at every click."
         button={[
           {
             text: "",

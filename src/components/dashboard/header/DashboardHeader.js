@@ -58,7 +58,7 @@ const DashboardHeader = () => {
       title: "Current balance",
       icon: "img/core-img/logo.png",
       balance: 4.0678,
-      balanceType: "G",
+      balanceType: "VND",
     },
   ];
 

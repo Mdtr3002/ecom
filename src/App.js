@@ -340,7 +340,7 @@ function App() {
             </div>
       </Modal.Body>
     </Modal> */}
-          <div className={`admin-wrapper ${isLogin ? "no-mt" : "notLogin"}`}>
+          <div className={`admin-wrapper ${isLogin ? "no-mt" : "notLogin"} `}>
             {isAuthenticate && <Header clubDayInfo={clubDayInfo} />}
             <NotificationContainer />
             <Routes>

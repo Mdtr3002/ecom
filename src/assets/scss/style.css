@@ -3287,6 +3287,7 @@ textarea.form-control {
   .dashboard-header,
   .dashboard-footer,
   .admin-wrapper {
+    width: calc(100% - 252px);
     margin-left: 252px;
   }
 }
@@ -3294,6 +3295,7 @@ textarea.form-control {
 .dashboard-footer.notLogin,
 .admin-wrapper.notLogin {
   margin: auto !important;
+  width: 100% !important;
 }
 
 .admin-sidebar-wrap {

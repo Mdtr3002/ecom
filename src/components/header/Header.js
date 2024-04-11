@@ -100,57 +100,57 @@ export default function Header() {
       title: "Current balance",
       icon: "img/core-img/logo.png",
       balance: "empty",
-      balanceType: "G",
+      balanceType: "VND",
     },
     {
       title: "Current balance",
       icon: "img/core-img/logo.png",
       balance: "empty",
-      balanceType: "G",
+      balanceType: "VND",
     },
   ];
 
-  const ClubDaySection = [
-    {
-      id: 1,
-      path: "/oif",
-      icon: "bi-journal-code",
-      text: "Tutorial",
-    },
-    {
-      id: 2,
-      path: "/math-quiz",
-      icon: "bi-mortarboard",
-      text: "GDSC Quiz",
-    },
-    {
-      id: 3,
-      path: "/checkin",
-      icon: "bi-qr-code",
-      text: "Check-In",
-    },
-  ];
+  // const ClubDaySection = [
+  //   {
+  //     id: 1,
+  //     path: "/oif",
+  //     icon: "bi-journal-code",
+  //     text: "Tutorial",
+  //   },
+  //   {
+  //     id: 2,
+  //     path: "/math-quiz",
+  //     icon: "bi-mortarboard",
+  //     text: "GDSC Quiz",
+  //   },
+  //   {
+  //     id: 3,
+  //     path: "/checkin",
+  //     icon: "bi-qr-code",
+  //     text: "Check-In",
+  //   },
+  // ];
 
-  const ClubDayAdminSection = [
-    {
-      id: 4,
-      path: "/admin-checkin",
-      icon: "bi-qr-code-scan",
-      text: "Admin Checkin",
-    },
-    {
-      id: 5,
-      path: "/prize-exchange",
-      icon: "bi-gift",
-      text: "Prize Exchange",
-    },
-    // {
-    //   id: 6,
-    //   path: "/prize-history",
-    //   icon: "bi-clock-history",
-    //   text: "Prize History",
-    // },
-  ];
+  // const ClubDayAdminSection = [
+  //   {
+  //     id: 4,
+  //     path: "/admin-checkin",
+  //     icon: "bi-qr-code-scan",
+  //     text: "Admin Checkin",
+  //   },
+  //   {
+  //     id: 5,
+  //     path: "/prize-exchange",
+  //     icon: "bi-gift",
+  //     text: "Prize Exchange",
+  //   },
+  //   // {
+  //   //   id: 6,
+  //   //   path: "/prize-history",
+  //   //   icon: "bi-clock-history",
+  //   //   text: "Prize History",
+  //   // },
+  // ];
 
   const MainSection = [
     {
@@ -200,32 +200,32 @@ export default function Header() {
     },
   ];
 
-  const GameSection = [
-    {
-      id: 15,
-      path: "/tutorial",
-      icon: "bi-flag",
-      text: "Tutorial",
-    },
-    {
-      id: 16,
-      path: "/leaderboard",
-      icon: "bi-trophy",
-      text: "Leaderboard",
-    },
-    {
-      id: 17,
-      path: "/math-quiz",
-      icon: "bi-mortarboard",
-      text: "GDSC Quiz",
-    },
-    {
-      id: 18,
-      path: "/fast-to-g",
-      icon: "bi-boxes",
-      text: "Fast to G",
-    },
-  ];
+  // const GameSection = [
+  //   {
+  //     id: 15,
+  //     path: "/tutorial",
+  //     icon: "bi-flag",
+  //     text: "Tutorial",
+  //   },
+  //   {
+  //     id: 16,
+  //     path: "/leaderboard",
+  //     icon: "bi-trophy",
+  //     text: "Leaderboard",
+  //   },
+  //   {
+  //     id: 17,
+  //     path: "/math-quiz",
+  //     icon: "bi-mortarboard",
+  //     text: "GDSC Quiz",
+  //   },
+  //   {
+  //     id: 18,
+  //     path: "/fast-to-g",
+  //     icon: "bi-boxes",
+  //     text: "Fast to G",
+  //   },
+  // ];
 
   const AccountSection = [
     {
@@ -243,8 +243,8 @@ export default function Header() {
     {
       id: 21,
       path: "/connect",
-      icon: "bi-discord",
-      text: "Connect",
+      icon: "bi-coin",
+      text: "My Wallet",
     },
   ];
 
@@ -322,7 +322,7 @@ export default function Header() {
                   <span className="counter">{user.balance}</span>
                   <span className="ms-2">{balanceCard[0].balanceType}</span>
                 </h5>
-                <div className="thematic-break mb-3 mt-3" />
+                {/* <div className="thematic-break mb-3 mt-3" />
                 <OverlayTrigger
                   key={"progress"}
                   placement="right"
@@ -413,7 +413,7 @@ export default function Header() {
                       }}
                     </AnimatedProgressProvider>
                   </div>
-                </OverlayTrigger>
+                </OverlayTrigger> */}
               </div>
             </div>
 
@@ -421,7 +421,7 @@ export default function Header() {
             <div className="sidenav">
               <ul style={{ marginTop: 0 }}>
                 {/* Dashboard Section */}
-                <li>OIF 2024</li>
+                {/* <li>OIF 2024</li>
                 {ClubDaySection.map((elem) => (
                   <li key={elem.id}>
                     <NavLink to={elem.path} end onClick={handleToggle}>
@@ -439,7 +439,7 @@ export default function Header() {
                       </NavLink>
                     </li>
                   ))}
-                <li className="thematic-break" />
+                <li className="thematic-break" /> */}
 
                 <li>Main</li>
                 {MainSection.map((elem) => (
@@ -465,7 +465,7 @@ export default function Header() {
                 <li className="thematic-break" />
 
                 {/* Game Section */}
-                <li>Game</li>
+                {/* <li>Game</li>
                 {GameSection.map((elem) => (
                   <li key={elem.id}>
                     <NavLink to={elem.path} end onClick={handleToggle}>
@@ -474,7 +474,7 @@ export default function Header() {
                     </NavLink>
                   </li>
                 ))}
-                <li className="thematic-break" />
+                <li className="thematic-break" /> */}
 
                 {/* Account Section */}
                 <li>Account</li>

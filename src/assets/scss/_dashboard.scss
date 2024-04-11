@@ -6,11 +6,12 @@
     margin-left: 0;
 
     @media #{$breakpoint-lg} {
-        // width: calc(100% - 252px);
+        width: calc(100% - 252px);
         margin-left: 252px;
     }
     &.notLogin {
         margin: auto !important;
+        width: 100% !important;
     }
 }
 

@@ -20,7 +20,6 @@ const ItemExchangeIntro = (props) => {
   const [collection, setCollection] = useState({});
   const dispatch = useDispatch();
 
-
   useEffect(() => {
     MarketPlaceServices.getAllMarketPlaceItem()
       .then(async (res) => {
@@ -182,7 +181,6 @@ const ItemExchangeIntro = (props) => {
                       style={{
                         marginBottom: 0,
                         cursor: "pointer",
-                        color: "white",
                       }}
                     >
                       {elem}
@@ -242,7 +240,7 @@ const ItemExchangeIntro = (props) => {
               View all
             </Link>
           </div>
-          <h6>Check out our reward collection</h6>
+          <h6>Check out our item collection</h6>
           <div className="trending-auction-slide">
             <TinySlider settings={trendingAuctionSettings}>
               {LiveAuctionsCards}
