@@ -19,14 +19,14 @@ import Quiz from "../components/MathQuiz/Quiz.js";
 import { useLocation } from "react-router-dom";
 
 const GameScreen = () => {
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    if (pathname == '/connect') {
+    if (pathname == "/connect") {
       localStorage.setItem("connectRequired", "true");
     }
-  },[]);
-  
+  }, []);
+
   const columns = [
     {
       dataField: "item",

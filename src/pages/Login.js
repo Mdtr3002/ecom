@@ -14,7 +14,7 @@ import { useLocation } from "react-router-dom";
 export default function Login() {
   const { pathname } = useLocation();
   useEffect(() => {
-    if (pathname == '/connect') {
+    if (pathname == "/connect") {
       localStorage.setItem("connectRequired", "true");
     }
   }, []);
@@ -27,16 +27,14 @@ export default function Login() {
     if (query.get("token")) {
       setToken(query.get("token"));
       dispatch({
-        type: LOGIN
+        type: LOGIN,
       });
       const connectRequired = localStorage.getItem("connectRequired");
       console.log("connectRequired");
       if (connectRequired == "true") {
         localStorage.setItem("connectRequired", "false");
-        navigate('/connect');
-      }
-      else
-        navigate('/');
+        navigate("/connect");
+      } else navigate("/");
 
       setTimeout(() => window.location.reload(), 300);
     }
@@ -44,11 +42,11 @@ export default function Login() {
 
   return (
     <>
-      <Header />
-      <Divider className="hide-on-mobile" />
+      {/* <Header /> */}
+      <Divider />
 
       <LoginContent
-        title="Welcome to GDSC Game!"
+        title="Welcome to NCWin!"
         subTitle="From our dedicated organizers, a community-based web which promote exciting Discord activities, fun-to-play games and built-in prize exchange mechanism"
         button={[
           {
@@ -58,12 +56,11 @@ export default function Login() {
         ]}
       />
 
-
       <Divider />
       <Divider />
       <Divider />
 
-      <div style={{ marginBottom: '-32px' }} className="footer-login">
+      <div style={{ marginBottom: "-32px" }} className="footer-login">
         <Footer />
       </div>
     </>

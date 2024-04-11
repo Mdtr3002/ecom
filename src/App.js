@@ -341,7 +341,7 @@ function App() {
       </Modal.Body>
     </Modal> */}
           <div className={`admin-wrapper ${isLogin ? "no-mt" : "notLogin"}`}>
-            <Header clubDayInfo={clubDayInfo} />
+            {isAuthenticate && <Header clubDayInfo={clubDayInfo} />}
             <NotificationContainer />
             <Routes>
               <Route path="/box" element={<OpenChestPage />} />

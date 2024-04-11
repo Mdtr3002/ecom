@@ -3287,7 +3287,6 @@ textarea.form-control {
   .dashboard-header,
   .dashboard-footer,
   .admin-wrapper {
-    width: calc(100% - 252px);
     margin-left: 252px;
   }
 }
@@ -4122,7 +4121,7 @@ textarea.form-control {
 }
 [data-theme=dark] .register-card p a,
 [data-theme=dark] .register-form .form-group label.label-psswd {
-  color: #ffffff;
+  color: #1f0757;
 }
 [data-theme=dark] .dashboard-activity-tab .nav-link,
 [data-theme=dark] .dashboard-tabs .nav-link,

@@ -28,7 +28,7 @@ const LoginContent = (props) => {
           <div className="col-12 col-md-6 col-xl-5">
             <div className="register-card">
               <h2>{title}</h2>
-              <p style={{ color: "white", whiteSpace: "pre-line" }}>
+              <p style={{ color: "#1f0757", whiteSpace: "pre-line" }}>
                 {subTitle}
                 <Link className="ms-1 hover-primary" to={button[0].path}>
                   {button[0].text}
