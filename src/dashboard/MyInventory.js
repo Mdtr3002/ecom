@@ -195,19 +195,28 @@ export default function MyInventory() {
                 </span> */}
                 {elem.isReceived === false &&
                   elem.isRequestToReceiveItem === false && (
-                    <span className="d-block fz-16" style={{ color: "white" }}>
+                    <span
+                      className="d-block fz-16"
+                      style={{ color: "#8480AE" }}
+                    >
                       Status: Not yet received
                     </span>
                   )}
                 {elem.isReceived === false &&
                   elem.isRequestToReceiveItem === true && (
-                    <span className="d-block fz-16" style={{ color: "white" }}>
+                    <span
+                      className="d-block fz-16"
+                      style={{ color: "#8480AE" }}
+                    >
                       Status: Delivering
                     </span>
                   )}
                 {elem.isReceived === true &&
                   elem.isRequestToReceiveItem === true && (
-                    <span className="d-block fz-16" style={{ color: "white" }}>
+                    <span
+                      className="d-block fz-16"
+                      style={{ color: "#8480AE" }}
+                    >
                       Status: Received
                     </span>
                   )}

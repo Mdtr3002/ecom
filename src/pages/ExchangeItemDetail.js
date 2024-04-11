@@ -615,7 +615,7 @@ const ExchangeItemDetail = () => {
                       className="bi bi-person-circle true"
                       style={{
                         backgroundColor: "transparent",
-                        color: "white",
+                        color: "#8480AE",
                         fontSize: "24px",
                       }}
                     />
@@ -633,11 +633,14 @@ const ExchangeItemDetail = () => {
                   >
                     <span
                       className="d-bloc xl-fz12"
-                      style={{ marginRight: "4px" }}
+                      style={{ marginRight: "4px", color: "#8480AE" }}
                     >
                       Owned by
                     </span>
-                    <div className="author d-blockhover-primary text-truncate xl-fz12">
+                    <div
+                      className="author d-blockhover-primary text-truncate xl-fz12"
+                      style={{ color: "#8480AE" }}
+                    >
                       {itemData.ownerName}
                     </div>
                   </div>
@@ -663,17 +666,13 @@ const ExchangeItemDetail = () => {
                   style={{ marginTop: "12px" }}
                 >
                   <div className="col-6 col-sm-4">
-                    <p style={{ color: "white" }} className="mb-2 xl-fz12">
-                      Starting Price
-                    </p>
+                    <p className="mb-2 xl-fz12">Starting Price</p>
                     <h5 className="text-center mb-0 border border-2 px-3 py-2 border-primary d-inline-block rounded text-primary w-100">
                       {itemData.minPrice}G
                     </h5>
                   </div>
                   <div className="col-6 col-sm-4">
-                    <p style={{ color: "white" }} className="mb-2 xl-fz12">
-                      Current Bid
-                    </p>
+                    <p className="mb-2 xl-fz12">Current Bid</p>
                     <h5 className="text-center mb-0 border border-2 px-3 py-2 border-primary d-inline-block rounded text-primary w-100">
                       {itemData.currentPrice}G
                     </h5>
@@ -805,7 +804,6 @@ const ExchangeItemDetail = () => {
                                     className="bi bi-person-circle true"
                                     style={{
                                       backgroundColor: "transparent",
-                                      color: "white",
                                       marginRight: "4px",
                                     }}
                                   />
@@ -819,7 +817,6 @@ const ExchangeItemDetail = () => {
                                       className="user-info"
                                       style={{
                                         marginBottom: 0,
-                                        color: "white",
                                       }}
                                     >
                                       <b>{ele.email} place a bid</b>
@@ -828,26 +825,14 @@ const ExchangeItemDetail = () => {
                                       className="user-info"
                                       style={{
                                         marginBottom: 0,
-                                        color: "white",
                                       }}
                                     >
                                       At {timeConverter(ele.createdAt)}
                                     </p>
                                   </div>
                                 </div>
-                                <p
-                                  className="user-info"
-                                  style={{ color: "white" }}
-                                >
-                                  Price: <b>{ele.price}</b>{" "}
-                                  <img
-                                    style={{
-                                      width: "20px",
-                                      marginBottom: "2px",
-                                    }}
-                                    src={gdscLogo}
-                                    alt="GDSC Logo"
-                                  />
+                                <p className="user-info">
+                                  Price: <b>{ele.price}</b> VND
                                 </p>
                               </div>
                             ))}

@@ -125,7 +125,7 @@ const SpecialBidContent = () => {
             </div>
             <div className="row gx-2 align-items-center">
               <div>
-                <span className="d-block fz-16" style={{ color: "white" }}>
+                <span className="d-block fz-16" style={{ color: "#8480AE" }}>
                   Coming Soon
                 </span>
               </div>

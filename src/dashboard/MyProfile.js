@@ -28,7 +28,7 @@ const MyProfile = ({ setClubDayUpdated }) => {
   const [name, setName] = useState(user.name);
   const [email, setEmail] = useState(user.email);
   const [phone, setPhone] = useState(user.phone);
-  const [university, setUniversity] = useState(user.university);
+  const [address, setAddress] = useState(user.university);
   const [studentId, setStudentId] = useState(user.studentId);
   const [dob, setDob] = useState(timeConverterForInput(user.dob));
   const [errMsg, setErrMsg] = useState("");
@@ -53,7 +53,7 @@ const MyProfile = ({ setClubDayUpdated }) => {
       email,
       name,
       phone,
-      university,
+      address,
       studentId,
       dob: Math.floor(new Date(dob).getTime()),
     })
@@ -166,22 +166,22 @@ const MyProfile = ({ setClubDayUpdated }) => {
 
                       <div className="col-2 d-flex align-items-center profile-width-s">
                         {" "}
-                        <p className="m-0">University</p>{" "}
+                        <p className="m-0">Address</p>{" "}
                       </div>
                       <div className="col-10 profile-width-l">
                         <input
                           className="form-control bg-gray border-0"
                           type="text"
-                          value={university}
-                          onChange={(e) => setUniversity(e.target.value)}
+                          value={address}
+                          onChange={(e) => setAddress(e.target.value)}
                           name="university"
-                          placeholder="University"
+                          placeholder="Your address"
                         />
                       </div>
 
                       <div className="col-2 d-flex align-items-center profile-width-s">
                         {" "}
-                        <p className="m-0">Student ID</p>{" "}
+                        <p className="m-0">Citizen ID</p>{" "}
                       </div>
                       <div className="col-10 profile-width-l">
                         <input
@@ -252,7 +252,7 @@ const MyProfile = ({ setClubDayUpdated }) => {
                   </div>
                 </div>
               </Tab>
-              <Tab eventKey="setting" title="Setting">
+              {/* <Tab eventKey="setting" title="Setting">
                 <div className="card">
                   <div className="card-body p-4 p-sm-5">
                     <div className="row g-4">
@@ -274,7 +274,7 @@ const MyProfile = ({ setClubDayUpdated }) => {
                     </div>
                   </div>
                 </div>
-              </Tab>
+              </Tab> */}
             </Tabs>
           </div>
         </div>

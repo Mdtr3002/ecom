@@ -31,13 +31,13 @@ export default function FollowedBid() {
 
   const onRefresh = () => {
     MarketPlaceServices.getAllBidItem()
-    .then(async (res) => {
-      setCollection(res.data.payload);
-    })
-    .catch((err) => {
-      // console.log("Error in get marketplace items ", err);
-    });
-  }
+      .then(async (res) => {
+        setCollection(res.data.payload);
+      })
+      .catch((err) => {
+        // console.log("Error in get marketplace items ", err);
+      });
+  };
 
   useEffect(() => {
     onRefresh();
@@ -167,9 +167,26 @@ export default function FollowedBid() {
                 className="row g-4"
                 style={{ color: "white", padding: "12px" }}
               >
-                <h4 style={{textAlign: 'center', marginBottom: 0}}>Claim this Item?</h4>
-                <Lottie style={{marginTop: 0, width: '72%', marginLeft: 'auto', marginRight: 'auto'}} animationData={claimAnimation} loop={true} />
-                <div style={{ display: "flex", justifyContent: "center", marginTop: 0 }}>
+                <h4 style={{ textAlign: "center", marginBottom: 0 }}>
+                  Claim this Item?
+                </h4>
+                <Lottie
+                  style={{
+                    marginTop: 0,
+                    width: "72%",
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                  animationData={claimAnimation}
+                  loop={true}
+                />
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    marginTop: 0,
+                  }}
+                >
                   <button
                     type="submit"
                     style={{
@@ -228,28 +245,67 @@ export default function FollowedBid() {
           {/* Item name */}
 
           <div className="row gx-2 align-items-center mt-3">
-            <h5 className="text-truncate">{elem?.itemId?.name || elem?.name} <img className="me-1" src={`${process.env.PUBLIC_URL}/img/core-img/fire.png`} alt="" /></h5>
-            <p style={{color: 'white', marginBottom: 0, display: 'flex'}}>
+            <h5 className="text-truncate">
+              {elem?.itemId?.name || elem?.name}{" "}
+              <img
+                className="me-1"
+                src={`${process.env.PUBLIC_URL}/img/core-img/fire.png`}
+                alt=""
+              />
+            </h5>
+            <p style={{ color: "white", marginBottom: 0, display: "flex" }}>
               {/* Current Bid: {elem.currentPrice} */}
-              <div style={{display: 'flex', flexDirection: 'column', width: '100%'}}>
-                <div className="d-flex" style={{justifyContent: 'space-between'}}>
-                  <div style={{color: ' #CFDEDB'}}><i className="me-1 bi bi-person-circle" />Owned by</div>
-                  <div style={{color: ' #CFDEDB'}}>Price:</div>
-                </div>
-                <div className="d-flex" style={{justifyContent: 'space-between', height: '24px'}}>
-                  <OverlayTrigger
-                  key={"progress"}
-                  placement="top"
-                  delay={{ show: 250, hide: 100 }}
-                  overlay={
-                    <Tooltip id={`tooltip-progress`} style={{ marginBottom: '0', textAlign: 'start' }}>
-                      <p style={{marginBottom: 0}}>{elem.ownerName}</p>
-                    </Tooltip>
-                  }
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  width: "100%",
+                }}
+              >
+                <div
+                  className="d-flex"
+                  style={{ justifyContent: "space-between" }}
                 >
-                  <div className='hover-blue' style={{maxWidth: '60%', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', cursor: 'pointer'}}>{elem.ownerName}</div>
-                </OverlayTrigger>
-                  <div>{elem.currentPrice} G</div>
+                  <div style={{ color: " #CFDEDB" }}>
+                    <i className="me-1 bi bi-person-circle" />
+                    Owned by
+                  </div>
+                  <div style={{ color: " #CFDEDB" }}>Price:</div>
+                </div>
+                <div
+                  className="d-flex"
+                  style={{ justifyContent: "space-between", height: "24px" }}
+                >
+                  <OverlayTrigger
+                    key={"progress"}
+                    placement="top"
+                    delay={{ show: 250, hide: 100 }}
+                    overlay={
+                      <Tooltip
+                        id={`tooltip-progress`}
+                        style={{ marginBottom: "0", textAlign: "start" }}
+                      >
+                        <p style={{ marginBottom: 0 }}>{elem.ownerName}</p>
+                      </Tooltip>
+                    }
+                  >
+                    <div
+                      className="hover-blue"
+                      style={{
+                        maxWidth: "60%",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        whiteSpace: "nowrap",
+                        cursor: "pointer",
+                        color: "#8480AE",
+                      }}
+                    >
+                      {elem.ownerName}
+                    </div>
+                  </OverlayTrigger>
+                  <div style={{ color: "#8480AE" }}>
+                    {elem.currentPrice} VND
+                  </div>
                 </div>
               </div>
             </p>
@@ -259,24 +315,32 @@ export default function FollowedBid() {
             className="row gx-2 align-items-center mt-3"
             style={{ justifyContent: "center" }}
           >
-            <div className="col-6" style={{ width: "100%", display: 'flex', justifyContent: 'start' }}>
+            <div
+              className="col-6"
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "start",
+              }}
+            >
               <Link
                 className="btn btn-primary rounded-pill btn-sm"
                 to={`/collection/bidding/${elem.collectionName}/${elem._id}`}
-                style={{marginRight: '4px'}}
+                style={{ marginRight: "4px" }}
               >
                 <i className="bi"></i>
                 Detail
               </Link>
-              {(user._id === elem.currentBidUserId && new Date(elem.expiredAt) < Date.now()) && (
-                <button
-                  className="btn btn-success rounded-pill btn-sm"
-                  onClick={() => setClaimModalShow(true)}
-                >
-                  <i className="bi"></i>
-                  Claim
-                </button>
-              )}
+              {user._id === elem.currentBidUserId &&
+                new Date(elem.expiredAt) < Date.now() && (
+                  <button
+                    className="btn btn-success rounded-pill btn-sm"
+                    onClick={() => setClaimModalShow(true)}
+                  >
+                    <i className="bi"></i>
+                    Claim
+                  </button>
+                )}
             </div>
           </div>
         </div>

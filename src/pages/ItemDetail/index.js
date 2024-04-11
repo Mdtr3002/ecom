@@ -280,14 +280,16 @@ const Item = () => {
                         <div
                           className="col-12"
                           style={{
-                            backgroundColor: "#1F0757",
+                            backgroundColor: "#8480ae",
                             borderRadius: "8px",
                             marginTop: 0,
                             padding: "12px",
                           }}
                         >
-                          <h5>Email</h5>
-                          <p style={{ marginBottom: 0 }}>{user.email}</p>
+                          <h5 style={{ color: "white" }}>Email</h5>
+                          <p style={{ marginBottom: 0, color: "white" }}>
+                            {user.email}
+                          </p>
                         </div>
                       </div>
 
@@ -295,13 +297,13 @@ const Item = () => {
                         <div
                           className="col-12"
                           style={{
-                            backgroundColor: "#1F0757",
+                            backgroundColor: "#8480ae",
                             borderRadius: "8px",
                             padding: "12px",
                           }}
                         >
-                          <h5>Tel</h5>
-                          <p style={{ marginBottom: 0 }}>
+                          <h5 style={{ color: "white" }}>Tel</h5>
+                          <p style={{ marginBottom: 0, color: "white" }}>
                             {user.phone === undefined || user.phone === ""
                               ? "Not set"
                               : user.phone}
@@ -472,24 +474,24 @@ const Item = () => {
 
                 {request === true && received === false && (
                   <div className="row align-items-end">
-                    <div className="col-6 col-sm-4 col-lg-5">
-                      <button
+                    <div className="col-12 col-sm-10 col-lg-10">
+                      {/* <button
                         className={`btn btn-primary rounded-pill w-100`}
                         onClick={receiveConfirm}
                       >
-                        {/* <img
+                        <img
                           className="me-1"
                           src={`${process.env.PUBLIC_URL}/${discoverData.buttonGroup[0].leftButtonIcon}`}
-                          alt="" /> */}
+                          alt="" />
                         Receive item
-                      </button>
-                      {/* <h4>
+                      </button> */}
+                      <h4>
                         <i
                           className="bi bi-truck"
                           style={{ marginRight: "8px" }}
                         />
                         Item is being delivered
-                      </h4> */}
+                      </h4>
                     </div>
                   </div>
                 )}
@@ -602,6 +604,7 @@ const Item = () => {
                             title="History"
                             style={{
                               overflowY: "scroll",
+                              color: "#8480AE",
                             }}
                           >
                             <div
@@ -628,7 +631,7 @@ const Item = () => {
                                       className="bi bi-person-circle true"
                                       style={{
                                         backgroundColor: "transparent",
-                                        color: "white",
+                                        color: "#8480AE",
                                         marginRight: "4px",
                                       }}
                                     />
@@ -642,7 +645,7 @@ const Item = () => {
                                         className="user-info"
                                         style={{
                                           marginBottom: 0,
-                                          color: "white",
+                                          color: "#8480AE",
                                         }}
                                       >
                                         <b>{ele.name} place a bid</b>
@@ -651,7 +654,7 @@ const Item = () => {
                                         className="user-info"
                                         style={{
                                           marginBottom: 0,
-                                          color: "white",
+                                          color: "#8480AE",
                                         }}
                                       >
                                         At {timeConverter(ele.createdAt)}
@@ -660,17 +663,17 @@ const Item = () => {
                                   </div>
                                   <p
                                     className="user-info"
-                                    style={{ color: "white" }}
+                                    style={{ color: "#8480AE" }}
                                   >
-                                    Price: <b>{ele.price}</b>{" "}
-                                    <img
+                                    Price: <b>{ele.price}</b> VND
+                                    {/* <img
                                       style={{
                                         width: "20px",
                                         marginBottom: "2px",
                                       }}
                                       src={gdscLogo}
                                       alt="GDSC Logo"
-                                    />
+                                    /> */}
                                   </p>
                                 </div>
                               ))}

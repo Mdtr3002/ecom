@@ -102,6 +102,7 @@ const Transaction = () => {
   useLayoutEffect(() => {
     UserServices.getTransaction().then((res) => {
       let data = res?.data?.payload || [];
+      console.log(data);
       setTransaction(data);
     });
   }, []);
